@@ -1,0 +1,45 @@
+<!doctype html5>
+<html>
+<head>
+    <title>Riot BootStrap</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+
+    <!--[if lt IE 9]>
+    <script src="libs/es5-shim.js"></script>
+    <script src="libs/html5-shiv.js"></script>
+    <script>html5.addElements('list')</script>
+    <script>html5.addElements('panel')</script>
+    <script>html5.addElements('tabs')</script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<script src="libs/riot+compiler.min.js"></script>
+
+<script src="components/panel.tag" type="riot/tag"></script>
+<script src="components/tabs.tag" type="riot/tag"></script>
+<script src="components/list.tag" type="riot/tag"></script>
+
+<list></list>
+
+<panel></panel>
+<tabs></tabs>
+
+<script>
+    var listData = [];
+
+    for (var i=0; i<10; i++) {
+        listData.push({title: "Item " + i, id: i});
+    }
+
+    riot.mount("*");
+
+    riot.mount('list', {data: listData});
+</script>
+
+</body>
+
+</html>
