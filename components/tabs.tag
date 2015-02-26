@@ -24,7 +24,6 @@
 
     toggleTab(e) {
         this.activeTab = e.item.tab;
-        this.update();
         return true;
     }
     </script>

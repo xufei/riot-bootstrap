@@ -17,7 +17,6 @@
 
     selectItem(e) {
         this.selectedItem = e.item.item;
-        this.update();
         return true;
     }
     </script>
